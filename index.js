@@ -26,8 +26,15 @@ inquirer
    },
    {
         type: "input",
-        messagae: "How can your project be used?",
+        message: "How can your project be used?",
         name: "Usage"
+   },
+   {
+        type: "confirm",
+        message: "Does your project include a license?",
+        name: "Confirm License"
+
+
    },
    {
         type: "list",
@@ -49,19 +56,22 @@ inquirer
    {
         type: "input",
         message: "What is your GitHub username?",
-        name: "Questions",
+        name: "GitHub",
    },
    {
         type: "input",
         message: "What is your email address?",
-        name: "Questions",
+        name: "Email",
     },
 {
     type: "input",
     message: "How can someone reach you with any questions about your project?",
-    name: "Questions",
+    name: "Question Instructions",
 },
- ])
+ ]).then((response) =>
+ console.log(response)
+ )
+ 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
