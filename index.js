@@ -32,7 +32,7 @@ inquirer
    {
         type: "list",
         message: "What license does your project have?",
-        name: "License",
+        name: "license",
         choices: ["N/A", "MIT License", "Apache License 2.0", "Creative Commons Zerov1.0 Universal", "GNU GPLv3"],
    }, 
    {
