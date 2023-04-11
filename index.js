@@ -59,7 +59,7 @@ inquirer
 {
     type: "input",
     message: "How can someone reach you with any questions about your project?",
-    name: "Question Instructions",
+    name: "QuestionInstructions",
 },
  ]).then((response) =>
  console.log(response)
