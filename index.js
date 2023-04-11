@@ -30,17 +30,10 @@ inquirer
         name: "Usage"
    },
    {
-        type: "confirm",
-        message: "Does your project include a license?",
-        name: "Confirm License"
-
-
-   },
-   {
         type: "list",
         message: "What license does your project have?",
         name: "License",
-        choices: ["MIT License", "Apache License 2.0", "Creative Commons Zerov1.0 Universal", "GNU GPLv3"],
+        choices: ["N/A", "MIT License", "Apache License 2.0", "Creative Commons Zerov1.0 Universal", "GNU GPLv3"],
    }, 
    {
         type: "input",
