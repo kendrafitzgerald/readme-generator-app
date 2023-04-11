@@ -18,11 +18,24 @@ console.log(renderLicenseBadge)
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  if (license === 'N/A') {
+    return ""
+  } else if (license === 'MIT License') {
+    return `[MIT License URL] (https://opensource.org/license/mit/)`
+  } else if (license === 'Apache License 2.0') {
+    return `[Apache License 2.0 URL] (https://www.apache.org/licenses/LICENSE-2.0`
+  } else if (license === 'Creative Commons Zerov1.0 Universal') {
+    return `[Creative Commons License URL] (https://creativecommons.org/publicdomain/zero/1.0/)`
+  } else if (license === 'GNU GPLv3') {
+    return `[GNU License URL](https://www.gnu.org/licenses/gpl-3.0.en.html)`
+  }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
