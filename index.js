@@ -1,9 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const markdownFile = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown')
 
-const generateReadMe = markdownFile.generateMarkdown
+// const generateReadMe = markdownFile.generateMarkdown
 
 // TODO: Create an array of questions for user input
 const questions = 
@@ -64,32 +64,20 @@ inquirer
     name: "QuestionInstructions",
 },
  ])
-//  .then((response) =>
+ .then((response) =>
 
-//     writeToFile('README.md', response)
-//  )
-
-
-//  .then((data) =>
-//      fs.writeFile('README.md', JSON.stringify(generateReadMe(data)), err =>
-//     err ? console.error(err) : console.log("Congrats! Your README has been generated!")
-//   ))
+    writeToFile('README.md', response)
+)
  
 
 //TODO: Create a function to write README file
-// function writeToFile(data) {
-//     fs.writeFile('README.md', data, err =>
-//     err ? console.error(err) : console.log("Congrats! Your README has been generated!")
+function writeToFile(fileName, data) {
+    const readMe= generateMarkdown(data);
+    fs.writeFile(fileName, readMe , err =>
+    err ? console.error(err) : console.log("Congrats! Your README has been generated!")
   
-// )}
-
-// function writeToFile(fileName, data) {
-//     generateReadMe(data);
-//     fs.writeFile(fileName, JSON.stringify(generateReadMe), err =>
-//     err ? console.error(err) : console.log("Congrats! Your README has been generated!")
-  
-// )
-// }
+)
+}
 
 
 // TODO: Create a function to initialize app
