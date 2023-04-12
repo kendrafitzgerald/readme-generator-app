@@ -61,16 +61,24 @@ inquirer
     message: "How can someone reach you with any questions about your project?",
     name: "QuestionInstructions",
 },
- ]).then((response) =>
- console.log(response)
- )
+ ]).then((data) =>
+    fs.writeFile('README.md', JSON.stringify(data), (err) =>
+    err ? console.error(err) : console.log("Congrats! Your README has been generated!"),
+    generateMarkdown()
+ ))
  
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//TODO: Create a function to write README file
+// function writeToFile(data) {
+//     fs.writeFile('README.md', data, err =>
+//     err ? console.error(err) : console.log("Congrats! Your README has been generated!")
+  
+// )}
+
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+}
 
 // Function call to initialize app
 init();

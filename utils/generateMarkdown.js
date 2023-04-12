@@ -1,5 +1,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
+const fs = require('fs')
+
 function renderLicenseBadge(license) {
   if (license === 'N/A') {
     return ""
@@ -13,7 +16,6 @@ function renderLicenseBadge(license) {
     return `[GNU License Badge](https://img.shields.io/badge/GNU%20Public%20License-GNU%20GPLv3-yellow)`
   }
 }
-console.log(renderLicenseBadge)
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -44,26 +46,30 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title} ${renderLicenseBadge}
+  return `# ${data.title} 
+  
+  ${renderLicenseBadge}
 
-  ##Description
+  ## Description
   ${data.Description}
 
-  ##Installation
+  ## Table of Contents
+
+  ## Installation
   ${data.Installation}
 
-  ##Usage
+  ## Usage
   ${data.Usage}
 
   ${renderLicenseSection}
 
-  ##Contributing
+  ## Contributing
   ${data.Contributing}
 
-  ##Tests
+  ## Tests
   ${data.Tests}
 
-  ##Questions
+  ## Questions
   My GitHub username is [GitHub UserName](${data.GitHub}). My email is ${data.Email}. ${data.QuestionInstructions}
 
 `;
