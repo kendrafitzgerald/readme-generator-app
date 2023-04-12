@@ -7,13 +7,13 @@ function renderLicenseBadge(license) {
   if (license === 'N/A') {
     return ""
   } else if (license === 'MIT License') {
-    return `[MIT License Badge](https://img.shields.io/badge/MIT-MIT%20License-blue)`
+    return `![MIT License Badge](https://img.shields.io/badge/MIT-MIT%20License-blue)`
   } else if (license === 'Apache License 2.0') {
-    return `[Apache License 2.0 Badge](https://img.shields.io/badge/Apache%202.0-Apache%20License%202.0-red)`
+    return `![Apache License 2.0 Badge](https://img.shields.io/badge/Apache%202.0-Apache%20License%202.0-red)`
   } else if (license === 'Creative Commons Zerov1.0 Universal') {
-    return `[Creative Commons License Badge](https://img.shields.io/badge/Creative%20Commons-Creative%20Commons%20Zerov1.0%20Universal-purple)`
+    return `![Creative Commons License Badge](https://img.shields.io/badge/Creative%20Commons-Creative%20Commons%20Zerov1.0%20Universal-purple)`
   } else if (license === 'GNU GPLv3') {
-    return `[GNU License Badge](https://img.shields.io/badge/GNU%20Public%20License-GNU%20GPLv3-yellow)`
+    return `![GNU License Badge](https://img.shields.io/badge/GNU%20Public%20License-GNU%20GPLv3-yellow)`
   }
 }
 
@@ -39,8 +39,7 @@ function renderLicenseSection(license) {
   if (license=== 'N/A') {
     return ""
   } else {
-    return `## License
-              This project uses the ${license}. Click the provided link to learn more ${renderLicenseLink(license)}!`
+    return `This project uses the ${license}. Click the provided link to learn more ${renderLicenseLink(license)}!`
   }
 }
 
@@ -67,7 +66,9 @@ function generateMarkdown(data) {
   ## Usage
   ${data.Usage}
 
-  ${renderLicenseSection()}
+  ## License
+
+  ${renderLicenseSection(data.license)}
 
   ## Contributing
   ${data.Contributing}
