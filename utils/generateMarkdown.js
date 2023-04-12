@@ -53,12 +53,17 @@ function generateMarkdown(data) {
   ${data.Description}
 
   ## Table of Contents
-  -[Installation](#installation)
-  -[Usage](#usage)
-  -[License](#license)
-  -[Contributing](#contributing)
-  -[Tests](#tests)
-  -[Questions](#questions)
+- [Installation](#installation)
+
+- [Usage](#usage)
+
+- [License](#license)
+
+- [Contributing](#contributing)
+
+- [Tests](#tests)
+
+- [Questions](#questions)
 
   ## Installation
   ${data.Installation}
@@ -77,7 +82,7 @@ function generateMarkdown(data) {
   ${data.Tests}
 
   ## Questions
-  My GitHub username is [GitHub UserName](${data.GitHub}). My email is ${data.Email}. ${data.QuestionInstructions}
+  My GitHub username is (https://github.com/${data.GitHub}). My email is ${data.Email}. ${data.QuestionInstructions}
 
 `;
 }
