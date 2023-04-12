@@ -65,7 +65,7 @@ inquirer
  ])
  .then((response) =>
 
-    writeToFile('README.md', response)
+    writeToFile('READMEgenerated.md', response)
 )
  
 
