@@ -62,26 +62,34 @@ inquirer
     name: "QuestionInstructions",
 },
  ])
-//  .then((data) =>
-//     fs.writeFile('README.md', JSON.stringify(data), (generateMarkdown), (err) =>
-//     err ? console.error(err) : console.log("Congrats! Your README has been generated!"),
-//     generateMarkdown
-//  ))
+ .then((data) =>
+     fs.writeFile('README.md', JSON.stringify(data), err =>
+    err ? console.error(err) : console.log("Congrats! Your README has been generated!")
+  ))
  
 
 //TODO: Create a function to write README file
-function writeToFile(data) {
-    fs.writeFile('README.md', data, err =>
-    err ? console.error(err) : console.log("Congrats! Your README has been generated!")
+// function writeToFile(data) {
+//     fs.writeFile('README.md', data, err =>
+//     err ? console.error(err) : console.log("Congrats! Your README has been generated!")
   
-)}
+// )}
 
 
 // TODO: Create a function to initialize app
+// function init() {
+    
+// inquirer
+// .prompt([questions])
+//  .then(data=> {
+//         generateMarkdown(data)
+//     })
+//     // .then (data => {
+//     //     writeToFile(data)
+//     // })
+// }
 
-// Function call to initialize app
-init()
-
-
+// // // Function call to initialize app
+//  init();
 
 
